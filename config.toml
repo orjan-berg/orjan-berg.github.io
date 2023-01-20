@@ -1,0 +1,4 @@
+baseURL = 'https://orjan-berg.github.io//'
+languageCode = 'en-us'
+title = 'Blog for future Ørjan'
+theme = 'ananke'
