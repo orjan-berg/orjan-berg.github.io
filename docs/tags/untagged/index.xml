@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hello Friend NG</title>
-    <link>https://orjan-berg.github.io/</link>
-    <description>Recent content on Hello Friend NG</description>
+    <title>untagged on Hello Friend NG</title>
+    <link>https://orjan-berg.github.io/tags/untagged/</link>
+    <description>Recent content in untagged on Hello Friend NG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 22 Jan 2023 21:54:20 +0100</lastBuildDate><atom:link href="https://orjan-berg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Jan 2023 21:54:20 +0100</lastBuildDate><atom:link href="https://orjan-berg.github.io/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Examplepost</title>
       <link>https://orjan-berg.github.io/posts/examplepost/</link>
@@ -15,16 +15,6 @@
       
       <guid>https://orjan-berg.github.io/posts/examplepost/</guid>
       <description>GIT workflow Etter at du har gjort en endring i en fil kjør kommandoen git status:</description>
-    </item>
-    
-    <item>
-      <title>My First Post</title>
-      <link>https://orjan-berg.github.io/posts/my-first-post/</link>
-      <pubDate>Fri, 20 Jan 2023 15:29:38 +0100</pubDate>
-      
-      <guid>https://orjan-berg.github.io/posts/my-first-post/</guid>
-      <description>Introduction This is bold text, and this is emphasized text.
-Visit the Hugo website!</description>
     </item>
     
   </channel>

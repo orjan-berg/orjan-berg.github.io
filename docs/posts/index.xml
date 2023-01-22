@@ -6,8 +6,21 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 20 Jan 2023 15:29:38 +0100</lastBuildDate>
+        <lastBuildDate>Sun, 22 Jan 2023 21:54:20 +0100</lastBuildDate>
         <atom:link href="https://orjan-berg.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Examplepost</title>
+            <link>https://orjan-berg.github.io/posts/examplepost/</link>
+            <pubDate>Sun, 22 Jan 2023 21:54:20 +0100</pubDate>
+            
+            <guid>https://orjan-berg.github.io/posts/examplepost/</guid>
+            <description>GIT workflow Etter at du har gjort en endring i en fil kjør kommandoen git status:</description>
+            <content type="html"><![CDATA[<h2 id="git-workflow">GIT workflow</h2>
+<p>Etter at du har gjort en endring i en fil kjør kommandoen git status:</p>
+<p><img src="/images/GitStatus.png" alt="Example image"></p>
+]]></content>
+        </item>
         
         <item>
             <title>My First Post</title>
