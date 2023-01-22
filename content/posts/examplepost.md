@@ -12,4 +12,4 @@ tags:
 
 Etter at du har gjort en endring i en fil kjør kommandoen git status:
 
-![Example image](/images/GitStatus.png)
+![Example image](docs/images/GitStatus.png)
