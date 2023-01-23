@@ -51,7 +51,3 @@ publishDir   = "docs"
     identifier = "blog"
     name       = "Blog"
     url        = "/posts"
-
-    identifier = "about"
-    name       = "About"
-    url        = "/"
