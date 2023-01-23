@@ -14,7 +14,8 @@
       <pubDate>Sun, 22 Jan 2023 21:54:20 +0100</pubDate>
       
       <guid>https://orjan-berg.github.io/posts/examplepost/</guid>
-      <description>GIT workflow Etter at du har gjort en endring i en fil kjør kommandoen git status:</description>
+      <description>GIT workflow Etter at du har gjort en endring i en fil kjør kommandoen git status:
+Her ser vi at det er 1 fil (examplepost.md) som ikke er &amp;ldquo;added&amp;rdquo; til Git. Vi gjør det med kommandoen git add &amp;ndash;all (eller git add content/posts/examplepost.md).</description>
     </item>
     
   </channel>
