@@ -14,10 +14,17 @@
       <pubDate>Wed, 25 Jan 2023 15:34:17 +0100</pubDate>
       
       <guid>https://orjan-berg.github.io/posts/robocopybasics/</guid>
-      <description>En kjapp gjennomgang i bruken av Robocopy.
-Test med robocopy
-eller bruk block
-robocopy </description>
+      <description>Robocopy &amp;lsquo;C:\Program Files (x86)\Visma\Business&#39; E:\Temp\Business /e /NFL /NDL /NS /NC /NJH /MT:2
+Parametere /s kopierer alle foldere ekskluder tomme
+/e kopierer alle foldere inkludert tomme
+/EF *Eksludere filer f.eks .pdf
+/ED Eksludere directory
+/NFL No File List - don&amp;rsquo;t log file names.
+/NDL No Directory List - don&amp;rsquo;t log directory names.
+/NJH No Job Header.
+/NJS No Job Summary.
+/NP No Progress - don&amp;rsquo;t display percentage copied.
+/NS No Size - don&amp;rsquo;t log file sizes.</description>
     </item>
     
     <item>

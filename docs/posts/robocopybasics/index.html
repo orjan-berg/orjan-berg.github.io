@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="En kjapp gjennomgang i bruken av Robocopy.
-Test med robocopy
-eller bruk block
-robocopy " />
+<meta name="description" content="Robocopy &amp;lsquo;C:\Program Files (x86)\Visma\Business&#39; E:\Temp\Business /e /NFL /NDL /NS /NC /NJH /MT:2
+Parametere /s kopierer alle foldere ekskluder tomme
+/e kopierer alle foldere inkludert tomme
+/EF *Eksludere filer f.eks .pdf
+/ED Eksludere directory
+/NFL No File List - don&amp;rsquo;t log file names.
+/NDL No Directory List - don&amp;rsquo;t log directory names.
+/NJH No Job Header.
+/NJS No Job Summary.
+/NP No Progress - don&amp;rsquo;t display percentage copied.
+/NS No Size - don&amp;rsquo;t log file sizes." />
 <meta name="keywords" content=", untagged" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -42,29 +49,50 @@ robocopy " />
 
 
 <meta itemprop="name" content="RobocopyBasics">
-<meta itemprop="description" content="En kjapp gjennomgang i bruken av Robocopy.
-Test med robocopy
-eller bruk block
-robocopy "><meta itemprop="datePublished" content="2023-01-25T15:34:17+01:00" />
+<meta itemprop="description" content="Robocopy &lsquo;C:\Program Files (x86)\Visma\Business&#39; E:\Temp\Business /e /NFL /NDL /NS /NC /NJH /MT:2
+Parametere /s kopierer alle foldere ekskluder tomme
+/e kopierer alle foldere inkludert tomme
+/EF *Eksludere filer f.eks .pdf
+/ED Eksludere directory
+/NFL No File List - don&rsquo;t log file names.
+/NDL No Directory List - don&rsquo;t log directory names.
+/NJH No Job Header.
+/NJS No Job Summary.
+/NP No Progress - don&rsquo;t display percentage copied.
+/NS No Size - don&rsquo;t log file sizes."><meta itemprop="datePublished" content="2023-01-25T15:34:17+01:00" />
 <meta itemprop="dateModified" content="2023-01-25T15:34:17+01:00" />
-<meta itemprop="wordCount" content="14"><meta itemprop="image" content="https://orjan-berg.github.io"/>
+<meta itemprop="wordCount" content="83"><meta itemprop="image" content="https://orjan-berg.github.io"/>
 <meta itemprop="keywords" content="untagged," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://orjan-berg.github.io"/>
 
 <meta name="twitter:title" content="RobocopyBasics"/>
-<meta name="twitter:description" content="En kjapp gjennomgang i bruken av Robocopy.
-Test med robocopy
-eller bruk block
-robocopy "/>
+<meta name="twitter:description" content="Robocopy &lsquo;C:\Program Files (x86)\Visma\Business&#39; E:\Temp\Business /e /NFL /NDL /NS /NC /NJH /MT:2
+Parametere /s kopierer alle foldere ekskluder tomme
+/e kopierer alle foldere inkludert tomme
+/EF *Eksludere filer f.eks .pdf
+/ED Eksludere directory
+/NFL No File List - don&rsquo;t log file names.
+/NDL No Directory List - don&rsquo;t log directory names.
+/NJH No Job Header.
+/NJS No Job Summary.
+/NP No Progress - don&rsquo;t display percentage copied.
+/NS No Size - don&rsquo;t log file sizes."/>
 
 
 
     <meta property="og:title" content="RobocopyBasics" />
-<meta property="og:description" content="En kjapp gjennomgang i bruken av Robocopy.
-Test med robocopy
-eller bruk block
-robocopy " />
+<meta property="og:description" content="Robocopy &lsquo;C:\Program Files (x86)\Visma\Business&#39; E:\Temp\Business /e /NFL /NDL /NS /NC /NJH /MT:2
+Parametere /s kopierer alle foldere ekskluder tomme
+/e kopierer alle foldere inkludert tomme
+/EF *Eksludere filer f.eks .pdf
+/ED Eksludere directory
+/NFL No File List - don&rsquo;t log file names.
+/NDL No Directory List - don&rsquo;t log directory names.
+/NJH No Job Header.
+/NJS No Job Summary.
+/NP No Progress - don&rsquo;t display percentage copied.
+/NS No Size - don&rsquo;t log file sizes." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://orjan-berg.github.io/posts/robocopybasics/" /><meta property="og:image" content="https://orjan-berg.github.io"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-01-25T15:34:17+01:00" />
@@ -157,11 +185,31 @@ robocopy " />
       
 
       <div class="post-content">
-        <p>En kjapp gjennomgang i bruken av Robocopy.</p>
-<p>Test med <code>robocopy</code></p>
-<p>eller bruk block</p>
-<pre tabindex="0"><code>robocopy
-</code></pre>
+        <p>Robocopy &lsquo;C:\Program Files (x86)\Visma\Business' E:\Temp\Business /e /NFL /NDL /NS /NC /NJH /MT:2</p>
+<h2 id="parametere">Parametere</h2>
+<h3 id="s">/s</h3>
+<p><em>kopierer alle foldere ekskluder tomme</em></p>
+<h3 id="e">/e</h3>
+<p><em>kopierer alle foldere inkludert tomme</em></p>
+<h3 id="ef">/EF</h3>
+<p>*Eksludere filer f.eks <em>.pdf</em></p>
+<h3 id="ed">/ED</h3>
+<p><em>Eksludere directory</em></p>
+<h3 id="nfl">/NFL</h3>
+<p><em>No File List - don&rsquo;t log file names.</em></p>
+<h3 id="ndl">/NDL</h3>
+<p><em>No Directory List - don&rsquo;t log directory names.</em></p>
+<h3 id="njh">/NJH</h3>
+<p><em>No Job Header.</em></p>
+<h3 id="njs">/NJS</h3>
+<p><em>No Job Summary.</em></p>
+<h3 id="np">/NP</h3>
+<p><em>No Progress - don&rsquo;t display percentage copied.</em></p>
+<h3 id="ns">/NS</h3>
+<p><em>No Size - don&rsquo;t log file sizes.</em></p>
+<h3 id="nc">/NC</h3>
+<p><em>No Class - don&rsquo;t log file classes.</em></p>
+
       </div>
     </article>
 
@@ -186,7 +234,7 @@ robocopy " />
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        14 Words
+        83 Words
       </p>
 
       <p>

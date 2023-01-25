@@ -15,15 +15,42 @@
             <pubDate>Wed, 25 Jan 2023 15:34:17 +0100</pubDate>
             
             <guid>https://orjan-berg.github.io/posts/robocopybasics/</guid>
-            <description>En kjapp gjennomgang i bruken av Robocopy.
-Test med robocopy
-eller bruk block
-robocopy </description>
-            <content type="html"><![CDATA[<p>En kjapp gjennomgang i bruken av Robocopy.</p>
-<p>Test med <code>robocopy</code></p>
-<p>eller bruk block</p>
-<pre tabindex="0"><code>robocopy
-</code></pre>]]></content>
+            <description>Robocopy &amp;lsquo;C:\Program Files (x86)\Visma\Business&#39; E:\Temp\Business /e /NFL /NDL /NS /NC /NJH /MT:2
+Parametere /s kopierer alle foldere ekskluder tomme
+/e kopierer alle foldere inkludert tomme
+/EF *Eksludere filer f.eks .pdf
+/ED Eksludere directory
+/NFL No File List - don&amp;rsquo;t log file names.
+/NDL No Directory List - don&amp;rsquo;t log directory names.
+/NJH No Job Header.
+/NJS No Job Summary.
+/NP No Progress - don&amp;rsquo;t display percentage copied.
+/NS No Size - don&amp;rsquo;t log file sizes.</description>
+            <content type="html"><![CDATA[<p>Robocopy &lsquo;C:\Program Files (x86)\Visma\Business' E:\Temp\Business /e /NFL /NDL /NS /NC /NJH /MT:2</p>
+<h2 id="parametere">Parametere</h2>
+<h3 id="s">/s</h3>
+<p><em>kopierer alle foldere ekskluder tomme</em></p>
+<h3 id="e">/e</h3>
+<p><em>kopierer alle foldere inkludert tomme</em></p>
+<h3 id="ef">/EF</h3>
+<p>*Eksludere filer f.eks <em>.pdf</em></p>
+<h3 id="ed">/ED</h3>
+<p><em>Eksludere directory</em></p>
+<h3 id="nfl">/NFL</h3>
+<p><em>No File List - don&rsquo;t log file names.</em></p>
+<h3 id="ndl">/NDL</h3>
+<p><em>No Directory List - don&rsquo;t log directory names.</em></p>
+<h3 id="njh">/NJH</h3>
+<p><em>No Job Header.</em></p>
+<h3 id="njs">/NJS</h3>
+<p><em>No Job Summary.</em></p>
+<h3 id="np">/NP</h3>
+<p><em>No Progress - don&rsquo;t display percentage copied.</em></p>
+<h3 id="ns">/NS</h3>
+<p><em>No Size - don&rsquo;t log file sizes.</em></p>
+<h3 id="nc">/NC</h3>
+<p><em>No Class - don&rsquo;t log file classes.</em></p>
+]]></content>
         </item>
         
         <item>
