@@ -7,7 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 25 Jan 2023 15:34:17 +0100</lastBuildDate><atom:link href="https://orjan-berg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jan 2023 11:23:50 +0100</lastBuildDate><atom:link href="https://orjan-berg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Where-Object</title>
+      <link>https://orjan-berg.github.io/posts/foreach/</link>
+      <pubDate>Mon, 30 Jan 2023 11:23:50 +0100</pubDate>
+      
+      <guid>https://orjan-berg.github.io/posts/foreach/</guid>
+      <description>Jeg hadde behov for å finne alle databaser som hadde et view med navnet &amp;ldquo;Actor&amp;rdquo;.
+I slike tilfeller har jeg min &amp;ldquo;go-to&amp;rdquo; modul i Powershell - dbatools.
+Først setter jeg opp noen variabler
+$sqlsrv = &amp;#34;nn-sql-02&amp;#34;$sqlcred = Get-Credential -UserName visma Sjekker at det er kontakt med server
+Get-DbaDatabase -SqlInstance $sqlsrv -SqlCredential $sqlcred -Database F0805 Svaret fra server er positivt
+ComputerName : NN-SQL-02InstanceName : MSSQLSERVERSqlInstance : NN-SQL-02Name : F0805Status : NormalIsAccessible : True Jeg kunne også benyttet funksjonen Connect-DbaInstance til dette formålet.</description>
+    </item>
+    
     <item>
       <title>RobocopyBasics</title>
       <link>https://orjan-berg.github.io/posts/robocopybasics/</link>

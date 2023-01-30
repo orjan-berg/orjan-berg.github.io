@@ -6,8 +6,45 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Wed, 25 Jan 2023 15:34:17 +0100</lastBuildDate>
+        <lastBuildDate>Mon, 30 Jan 2023 11:23:50 +0100</lastBuildDate>
         <atom:link href="https://orjan-berg.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Where-Object</title>
+            <link>https://orjan-berg.github.io/posts/foreach/</link>
+            <pubDate>Mon, 30 Jan 2023 11:23:50 +0100</pubDate>
+            
+            <guid>https://orjan-berg.github.io/posts/foreach/</guid>
+            <description>Jeg hadde behov for å finne alle databaser som hadde et view med navnet &amp;ldquo;Actor&amp;rdquo;.
+I slike tilfeller har jeg min &amp;ldquo;go-to&amp;rdquo; modul i Powershell - dbatools.
+Først setter jeg opp noen variabler
+$sqlsrv = &amp;#34;nn-sql-02&amp;#34;$sqlcred = Get-Credential -UserName visma Sjekker at det er kontakt med server
+Get-DbaDatabase -SqlInstance $sqlsrv -SqlCredential $sqlcred -Database F0805 Svaret fra server er positivt
+ComputerName : NN-SQL-02InstanceName : MSSQLSERVERSqlInstance : NN-SQL-02Name : F0805Status : NormalIsAccessible : True Jeg kunne også benyttet funksjonen Connect-DbaInstance til dette formålet.</description>
+            <content type="html"><![CDATA[<p>Jeg hadde behov for å finne alle databaser som hadde et view med navnet &ldquo;Actor&rdquo;.</p>
+<p>I slike tilfeller har jeg min &ldquo;go-to&rdquo; modul i Powershell - dbatools.</p>
+<p>Først setter jeg opp noen variabler</p>
+<pre tabindex="0"><code>$sqlsrv = &#34;nn-sql-02&#34;
+$sqlcred = Get-Credential -UserName visma
+</code></pre><p>Sjekker at det er kontakt med server</p>
+<pre tabindex="0"><code>Get-DbaDatabase -SqlInstance $sqlsrv -SqlCredential $sqlcred -Database F0805
+</code></pre><p>Svaret fra server er positivt</p>
+<pre tabindex="0"><code>ComputerName       : NN-SQL-02
+InstanceName       : MSSQLSERVER
+SqlInstance        : NN-SQL-02
+Name               : F0805
+Status             : Normal
+IsAccessible       : True
+</code></pre><p>Jeg kunne også benyttet funksjonen <code>Connect-DbaInstance</code> til dette formålet.</p>
+<p>Jeg kan nå gå videre for å finne viewet jeg søker etter</p>
+<pre tabindex="0"><code>$views = Find-DbaView -SqlInstance $sqlsrv -SqlCredential $sqlcred -Pattern &#39;actor&#39; | Where-Object {$_.Name -like &#34;Actor&#34;} | Select-Object -Property Database, Name | ft -AutoSize
+</code></pre><p>Jeg bruker her funksjonen <code>Where-Object</code> for å finne alle views med navn &ldquo;Actor&rdquo;</p>
+<p>Ved å benytte <code>$views</code> finner jeg at det er kun 1 database, av totalt 103 databaser som har dette viewet.</p>
+<pre tabindex="0"><code>Database Name
+-------- ----
+F0005    Actor
+</code></pre>]]></content>
+        </item>
         
         <item>
             <title>RobocopyBasics</title>
