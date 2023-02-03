@@ -6,8 +6,56 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 30 Jan 2023 11:23:50 +0100</lastBuildDate>
+        <lastBuildDate>Fri, 03 Feb 2023 15:24:39 +0100</lastBuildDate>
         <atom:link href="https://orjan-berg.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Kryptert passord</title>
+            <link>https://orjan-berg.github.io/posts/encryptedcredentials/</link>
+            <pubDate>Fri, 03 Feb 2023 15:24:39 +0100</pubDate>
+            
+            <guid>https://orjan-berg.github.io/posts/encryptedcredentials/</guid>
+            <description>Hvordan kan vi bruke kryptert passord i Powershell skript? Lage et kryptert passord Vi lager en funksjon som lagrer et kryptert passord i en fil på disk.
+#function to Save Credentials to a fileFunction Save-Credential([string]$UserName, [string]$KeyPath){#Create directory for Key fileIf (!(Test-Path $KeyPath)) { Try {New-Item -ItemType Directory -Path $KeyPath -ErrorAction STOP | Out-Null}Catch {Throw $_.Exception.Message}}#store password encrypted in file$Credential = Get-Credential -Message &amp;#34;Enter the Credentials:&amp;#34; -UserName $UserName$Credential.</description>
+            <content type="html"><![CDATA[<h2 id="hvordan-kan-vi-bruke-kryptert-passord-i-powershell-skript">Hvordan kan vi bruke kryptert passord i Powershell skript?</h2>
+<h3 id="lage-et-kryptert-passord">Lage et kryptert passord</h3>
+<p>Vi lager en funksjon som lagrer et kryptert passord i en fil på disk.</p>
+<pre tabindex="0"><code>#function to Save Credentials to a file
+Function Save-Credential([string]$UserName, [string]$KeyPath)
+{
+    #Create directory for Key file
+    If (!(Test-Path $KeyPath)) {        
+        Try {
+            New-Item -ItemType Directory -Path $KeyPath -ErrorAction STOP | Out-Null
+        }
+        Catch {
+            Throw $_.Exception.Message
+        }
+    }
+    #store password encrypted in file
+    $Credential = Get-Credential -Message &#34;Enter the Credentials:&#34; -UserName $UserName
+    $Credential.Password | ConvertFrom-SecureString | Out-File &#34;$($KeyPath)\$($Credential.Username).cred&#34; -Force
+}
+</code></pre><p>Deretter bruker vi funksjonen <code>Save-Credential -Username &quot;vismaadmin&quot; -KeyPath &quot;c:\exsitec\cred&quot;</code></p>
+<p>Det krypterte passordet kan se ut som dette:</p>
+<pre tabindex="0"><code>01000000d08c9ddf0115d1118c7a00c04fc297eb010000009fdff65875d7ee41850f1a31722de5640000000002000000000003660000c000000010000000b331f6114b6428f1d4a392c2e19194ec0000000004800000a0000000100000007ca12454435ebd491dc697abe692d05918000000883adc0c65048f382253a512e795fdc4b354a1312a393c761400000052cbcca4313d77f80b0a6c679152b30f5cd0f5b1
+</code></pre><p>Når vi har det krypterte passordet, kan vi lese det fra fil og bruke det i et skript:</p>
+<pre tabindex="0"><code>#function to get credentials from a Saved file
+Function Get-SavedCredential([string]$UserName,[string]$KeyPath)
+{
+    If(Test-Path &#34;$($KeyPath)\$($Username).cred&#34;) {
+        $SecureString = Get-Content &#34;$($KeyPath)\$($Username).cred&#34; | ConvertTo-SecureString
+        $Credential = New-Object System.Management.Automation.PSCredential -ArgumentList $Username, $SecureString
+    }
+    Else {
+        Throw &#34;Unable to locate a credential for $($Username)&#34;
+    }
+    Return $Credential
+}
+</code></pre><p>Vi kaller på passordet på denne måten <code>$Cred = Get-SavedCredential -Username &quot;vismaadmin&quot; -KeyPath &quot;c:\exsitec\cred&quot;</code></p>
+<p>ide hentet fra <a href="https://www.sharepointdiary.com/2020/01/read-write-encrypted-password-file-in-powershell-script.html">Sharepoint Diary</a>.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Where-Object</title>

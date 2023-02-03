@@ -7,22 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 30 Jan 2023 11:23:50 +0100</lastBuildDate><atom:link href="https://orjan-berg.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Feb 2023 15:24:39 +0100</lastBuildDate><atom:link href="https://orjan-berg.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>powershell</title>
+      <link>https://orjan-berg.github.io/tags/powershell/</link>
+      <pubDate>Fri, 03 Feb 2023 15:24:39 +0100</pubDate>
+      
+      <guid>https://orjan-berg.github.io/tags/powershell/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>dbatools</title>
       <link>https://orjan-berg.github.io/tags/dbatools/</link>
       <pubDate>Mon, 30 Jan 2023 11:23:50 +0100</pubDate>
       
       <guid>https://orjan-berg.github.io/tags/dbatools/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Powershell</title>
-      <link>https://orjan-berg.github.io/tags/powershell/</link>
-      <pubDate>Mon, 30 Jan 2023 11:23:50 +0100</pubDate>
-      
-      <guid>https://orjan-berg.github.io/tags/powershell/</guid>
       <description></description>
     </item>
     

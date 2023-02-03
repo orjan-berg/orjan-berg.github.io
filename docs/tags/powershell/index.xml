@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Powershell on Hello Friend NG</title>
+    <title>powershell on Hello Friend NG</title>
     <link>https://orjan-berg.github.io/tags/powershell/</link>
-    <description>Recent content in Powershell on Hello Friend NG</description>
+    <description>Recent content in powershell on Hello Friend NG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 30 Jan 2023 11:23:50 +0100</lastBuildDate><atom:link href="https://orjan-berg.github.io/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Feb 2023 15:24:39 +0100</lastBuildDate><atom:link href="https://orjan-berg.github.io/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kryptert passord</title>
+      <link>https://orjan-berg.github.io/posts/encryptedcredentials/</link>
+      <pubDate>Fri, 03 Feb 2023 15:24:39 +0100</pubDate>
+      
+      <guid>https://orjan-berg.github.io/posts/encryptedcredentials/</guid>
+      <description>Hvordan kan vi bruke kryptert passord i Powershell skript? Lage et kryptert passord Vi lager en funksjon som lagrer et kryptert passord i en fil på disk.
+#function to Save Credentials to a fileFunction Save-Credential([string]$UserName, [string]$KeyPath){#Create directory for Key fileIf (!(Test-Path $KeyPath)) { Try {New-Item -ItemType Directory -Path $KeyPath -ErrorAction STOP | Out-Null}Catch {Throw $_.Exception.Message}}#store password encrypted in file$Credential = Get-Credential -Message &amp;#34;Enter the Credentials:&amp;#34; -UserName $UserName$Credential.</description>
+    </item>
+    
     <item>
       <title>Where-Object</title>
       <link>https://orjan-berg.github.io/posts/foreach/</link>
