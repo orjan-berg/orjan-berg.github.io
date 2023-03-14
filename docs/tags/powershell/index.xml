@@ -7,7 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 03 Feb 2023 15:24:39 +0100</lastBuildDate><atom:link href="https://orjan-berg.github.io/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Mar 2023 12:05:14 +0100</lastBuildDate><atom:link href="https://orjan-berg.github.io/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Get-Date</title>
+      <link>https://orjan-berg.github.io/posts/getdate/</link>
+      <pubDate>Tue, 14 Mar 2023 12:05:14 +0100</pubDate>
+      
+      <guid>https://orjan-berg.github.io/posts/getdate/</guid>
+      <description>Ofte har man behov for å filtrere data, slik som jeg når jeg skulle finne records i en sql tabell som var endret etter en gitt dato.
+Jeg liker å bruke Powershell og spesielt modulen dbatools. Dette ble derfor mine foretrukne verktøy til å løse denne oppgaven.
+Har Powershell en cmdlet for å arbeide med datoer?
+For å finne ut av dette benyttet jeg Get-Command -CommandType -Name *date*
+Powershell kom med en rekke forslag,</description>
+    </item>
+    
     <item>
       <title>Kryptert passord</title>
       <link>https://orjan-berg.github.io/posts/encryptedcredentials/</link>

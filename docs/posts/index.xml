@@ -6,8 +6,37 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 03 Feb 2023 15:24:39 +0100</lastBuildDate>
+        <lastBuildDate>Tue, 14 Mar 2023 12:05:14 +0100</lastBuildDate>
         <atom:link href="https://orjan-berg.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Get-Date</title>
+            <link>https://orjan-berg.github.io/posts/getdate/</link>
+            <pubDate>Tue, 14 Mar 2023 12:05:14 +0100</pubDate>
+            
+            <guid>https://orjan-berg.github.io/posts/getdate/</guid>
+            <description>Ofte har man behov for å filtrere data, slik som jeg når jeg skulle finne records i en sql tabell som var endret etter en gitt dato.
+Jeg liker å bruke Powershell og spesielt modulen dbatools. Dette ble derfor mine foretrukne verktøy til å løse denne oppgaven.
+Har Powershell en cmdlet for å arbeide med datoer?
+For å finne ut av dette benyttet jeg Get-Command -CommandType -Name *date*
+Powershell kom med en rekke forslag,</description>
+            <content type="html"><![CDATA[<p>Ofte har man behov for å filtrere data, slik som jeg når jeg skulle finne records i en sql tabell som var endret etter en gitt dato.</p>
+<p>Jeg liker å bruke Powershell og spesielt modulen dbatools. Dette ble derfor mine foretrukne verktøy til å løse denne oppgaven.</p>
+<p>Har Powershell en cmdlet for å arbeide med datoer?</p>
+<p>For å finne ut av dette benyttet jeg <code>Get-Command -CommandType -Name *date*</code></p>
+<p>Powershell kom med en rekke forslag,</p>
+<p><img src="docs/images/GetDate01.png" alt="Example image"></p>
+<p>Av disse så fant jeg at <code>Get-Date</code> kunne gjøre det jeg var ute etter.</p>
+<p><code>Get-Date</code> har properties for å angi Day, Month og Year. Disse brukte jeg for å angi datoen jeg ville ha.</p>
+<p><code>$chdt = Get-Date -Year 2022 -Month 11 -Day 17</code> etter å ha satt variabelen $chdt slik jeg ville, var det på tide å hente fram dbtools.</p>
+<p>Dbtools har funksjonen <code>Invoke-DbaQuery</code>.</p>
+<p><code>invoke-DbaQuery -SqlInstance srv-prod-sql01 -Database VDC_SystemDB -query 'select * from VWUser'</code> henter ut alle records i tabellen VWUser. Jeg er ikke ute etter alle felter. Jeg piper derfor resultatet til <code>Select-Object</code>, på denne måten <code>Select-Object -Property UserId, Username, LastUpdate</code>.</p>
+<p>Nå har jeg de feltene jeg trenger, men fortsatt har jeg alt for mange records. Jeg piper derfor resultatet videre til <code>Where-Object</code>. <code>Where-Object {$_.LastUpdate.Date -ge $chdt}</code></p>
+<p>Helt til slutt vil jeg ha resultatet lagret i en csv fil. Det gjør jeg ved å pipe resultatet til <code>Export-Csv</code>.</p>
+<p>Den fulle onelineren blir derfor</p>
+<pre tabindex="0"><code>invoke-DbaQuery -SqlInstance srv-prod-sql01 -Database VDC_SystemDB -query &#39;select * from VWUser&#39; | Select-Object -Property UserId, Username, LastUpdate | Where-Object {$_.LastUpdate.Date -ge $chdt} | Export-Csv F:\Exsitec_Temp\VDC_brukere.csv -NoTypeInformation
+</code></pre>]]></content>
+        </item>
         
         <item>
             <title>Kryptert passord</title>

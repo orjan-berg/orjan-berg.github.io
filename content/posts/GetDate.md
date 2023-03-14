@@ -1,7 +1,7 @@
 ---
 title: "Get-Date"
 date: 2023-03-14T12:05:14+01:00
-draft: true
+draft: false
 toc: false
 images:
 tags:
