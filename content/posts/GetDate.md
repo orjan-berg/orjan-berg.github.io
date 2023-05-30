@@ -18,7 +18,7 @@ For å finne ut av dette benyttet jeg ``Get-Command -CommandType -Name *date*``
 
 Powershell kom med en rekke forslag,
 
-![Example image](GetDate01.png)
+![GetDateImage](GetDate01.png)
 
 Av disse så fant jeg at ``Get-Date`` kunne gjøre det jeg var ute etter.
 
