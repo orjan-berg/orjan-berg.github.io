@@ -34,5 +34,8 @@ Robocopy 'C:\Program Files (x86)\Visma\Business\' E:\Temp\Business /e /NFL /NDL 
 *No Size - don't log file sizes.*
 ### /NC  
 *No Class - don't log file classes.*
-
+### /MAXAGE:n
+*Exclude files older than n days/date.*
+### /MINAGE:n
+*Exclude files newer than n days/date.*
 
